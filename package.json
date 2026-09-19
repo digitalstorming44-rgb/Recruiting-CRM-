@@ -1,0 +1,19 @@
+{
+  "name": "digital-storming-recruiting-crm",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Digital Storming Owner Operator Recruiting CRM",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "test": "playwright test",
+    "test:core": "node tests/core.cjs",
+    "check": "node --check server.js && node --check public/js/app.js && node --check public/js/auth.js && node --check public/js/auth-service.js && node --check public/js/lead-repository.js && node --check public/js/legacy-accounts.js && node --check public/crm-upgrade.js",
+    "format": "prettier --write public tests playwright.config.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "prettier": "^3.9.8",
+    "supabase": "^2.117.0"
+  }
+}

@@ -1,0 +1,1062 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#102e30" />
+    <title>Digital Storming Recruiting CRM</title>
+    <meta
+      name="description"
+      content="Owner Operator recruiting and follow-up workspace for Digital Storming."
+    />
+    <link rel="stylesheet" href="crm-upgrade.css" />
+    <link rel="icon" type="image/svg+xml" href="brand-mark.svg" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/intake-security.css" />
+    <link rel="stylesheet" href="css/reference-polish.css" />
+  </head>
+  <body>
+    <div class="auth-screen" id="authScreen">
+      <section class="auth-brand" aria-labelledby="loginHeadline">
+        <a class="login-brand" href="./" aria-label="Digital Storming home"
+          ><span class="login-mark" aria-hidden="true"
+            ><img
+              class="brand-symbol"
+              src="brand-mark.svg"
+              alt=""
+              width="43"
+              height="43" /></span
+          ><span
+            >DIGITAL STORMING<span class="brand-caption"
+              >RECRUITING WORKSPACE</span
+            ></span
+          ></a
+        >
+        <div class="brand-story">
+          <div class="eyebrow">
+            <span></span> BUILT FOR THE PEOPLE WHO MOVE US
+          </div>
+          <h1 id="loginHeadline">
+            Great people.<br />New possibilities.<br /><em
+              >Forward, together.</em
+            >
+          </h1>
+          <p>
+            From the first conversation to the next opportunity.<br />Your
+            recruiting day, beautifully organized.
+          </p>
+          <div
+            class="workflow-preview"
+            aria-label="Your recruiting workflow: connect, qualify, onboard"
+          >
+            <div class="preview-heading">
+              <span>THE ROAD AHEAD</span
+              ><span class="preview-dots" aria-hidden="true">•••</span>
+            </div>
+            <div class="workflow-track">
+              <div>
+                <span class="step-icon">01</span><strong>Connect</strong
+                ><small>Start a conversation</small>
+              </div>
+              <i aria-hidden="true"></i>
+              <div>
+                <span class="step-icon">02</span><strong>Qualify</strong
+                ><small>Find the right fit</small>
+              </div>
+              <i aria-hidden="true"></i>
+              <div>
+                <span class="step-icon">03</span><strong>Onboard</strong
+                ><small>Move forward</small>
+              </div>
+            </div>
+            <div class="preview-bottom">
+              <span class="preview-check" aria-hidden="true">✓</span> Every next
+              step, in one place.
+            </div>
+          </div>
+        </div>
+        <div class="brand-footer">
+          <span>People first. Possibilities ahead.</span
+          ><span>EST. DIGITAL STORMING ↗</span>
+        </div>
+      </section>
+      <section class="auth-form-wrap" aria-labelledby="loginTitle">
+        <div class="workspace-label">
+          <span class="workspace-dot"></span> YOUR TEAM WORKSPACE
+        </div>
+        <form class="auth-form" id="loginForm">
+          <div class="login-kicker">LET’S GET YOU SETTLED IN</div>
+          <h2 id="loginTitle">Welcome back<span>.</span></h2>
+          <p>
+            A fresh day. A new opportunity.<br />Sign in to pick up where you
+            left off.
+          </p>
+          <div
+            class="auth-error"
+            id="loginError"
+            role="alert"
+            aria-live="polite"
+          ></div>
+          <div class="field">
+            <label for="loginUsername">Work email or username</label
+            ><input
+              id="loginUsername"
+              name="username"
+              autocomplete="username"
+              autocapitalize="none"
+              spellcheck="false"
+              required
+              placeholder="you@company.com"
+            />
+          </div>
+          <div class="field">
+            <label for="loginPassword">Password</label>
+            <div class="password-input">
+              <input
+                id="loginPassword"
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                required
+                placeholder="Enter your password"
+              /><button
+                id="togglePassword"
+                type="button"
+                aria-label="Show password"
+                aria-pressed="false"
+              >
+                Show
+              </button>
+            </div>
+          </div>
+          <div class="login-helper">
+            <span>Use your team-assigned account</span
+            ><button type="button" id="loginHelp">Need help?</button>
+          </div>
+          <button class="primary login-submit" id="loginSubmit" type="submit">
+            <span>Sign in to workspace</span><span aria-hidden="true">↗</span>
+          </button>
+          <p class="login-help" id="loginHelpText" hidden>
+            Contact your workspace administrator to reset your password or
+            request an account.
+          </p>
+          <div class="auth-note">
+            <span aria-hidden="true">⌑</span> Your next great hire starts here.
+          </div>
+        </form>
+        <footer class="login-footer">
+          <span>© <span id="loginYear">2026</span> Digital Storming</span
+          ><span>Made for your momentum.</span>
+        </footer>
+      </section>
+    </div>
+
+    <div class="app">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand">
+          <div class="mark">
+            <img
+              class="brand-symbol"
+              src="brand-mark.svg"
+              alt=""
+              width="42"
+              height="42"
+            />
+          </div>
+          <div>
+            <strong>Digital Storming</strong><small>Recruiting CRM</small>
+          </div>
+        </div>
+        <nav class="nav" id="nav">
+          <button class="active" data-view="dashboard">
+            <span class="ico">⌂</span>Dashboard
+          </button>
+          <button data-view="leads">
+            <span class="ico">◎</span><span id="leadNav">My Leads</span>
+          </button>
+          <button data-view="pipeline">
+            <span class="ico">▥</span>Pipeline
+          </button>
+          <button data-view="followups">
+            <span class="ico">◷</span><span id="followNav">My Follow-Ups</span>
+          </button>
+          <button data-view="qualified">
+            <span class="ico">✓</span>Qualified Leads
+          </button>
+          <button data-view="documents">
+            <span class="ico">▤</span>Documents
+          </button>
+          <button data-view="activity">
+            <span class="ico">↻</span>Activity
+          </button>
+          <button data-view="messages">
+            <span class="ico">✉</span>Team Messages
+            <span class="nav-badge" id="messageNavBadge"></span>
+          </button>
+          <button data-view="assistant">
+            <span class="ico">✦</span>AI Assistant
+          </button>
+          <button class="manager-only" data-view="performance">
+            <span class="ico">↗</span>Performance
+          </button>
+          <button class="manager-only" data-view="recruiters">
+            <span class="ico">♙</span>Team Profiles
+          </button>
+          <button class="admin-only" data-view="users">
+            <span class="ico">⚙</span>User Management
+          </button>
+        </nav>
+        <div class="sidebar-foot">
+          <div class="user">
+            <div class="avatar" id="avatar">AA</div>
+            <div>
+              <strong id="userName">Azra Azhar</strong
+              ><small id="userRole">Recruiter</small>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div class="scrim" id="scrim"></div>
+      <main class="main">
+        <header class="topbar">
+          <div style="display: flex; align-items: center; gap: 10px">
+            <button class="secondary mobile-menu" id="menuBtn">☰</button>
+            <h1>Owner Operator Recruiting</h1>
+          </div>
+          <div class="top-actions">
+            <button
+              class="secondary reminder"
+              id="notificationBtn"
+              title="Open notifications"
+            >
+              ♢<span class="reminder-badge" id="notificationBadge"
+                >0</span
+              ></button
+            ><button
+              class="secondary reminder"
+              id="reminderBtn"
+              title="Open overdue follow-ups"
+            >
+              ◷<span class="reminder-badge" id="reminderBadge">0</span></button
+            ><span class="account-chip" id="accountChip">Signed in</span
+            ><select
+              class="role-select"
+              id="roleSelect"
+              style="display: none"
+              aria-label="View portal as"
+            ></select
+            ><button class="secondary" id="signOutBtn">Sign out</button
+            ><button class="primary" id="addBtn">+ Add OO Lead</button>
+          </div>
+        </header>
+        <div class="content">
+          <section class="section active" id="dashboard">
+            <div class="heading">
+              <div>
+                <h2 id="greeting">Good morning, Azra</h2>
+                <p>Here’s what needs your attention today.</p>
+              </div>
+              <button class="primary" id="addBtn2">+ Add OO Lead</button>
+            </div>
+            <div class="attention" id="attentionBanner">
+              <div>
+                <strong id="attentionTitle">Follow-ups need attention</strong
+                ><span class="sub" id="attentionText"
+                  >Open the schedule to review overdue work.</span
+                >
+              </div>
+              <button class="secondary" data-go="followups">Review now</button>
+            </div>
+            <div class="metrics">
+              <div class="metric">
+                <div class="label">Active leads</div>
+                <div class="value" id="mActive">18</div>
+                <div class="trend">↑ 4 this week</div>
+              </div>
+              <div class="metric">
+                <div class="label">Follow-ups today</div>
+                <div class="value" id="mToday">6</div>
+                <div class="trend">3 remaining</div>
+              </div>
+              <div class="metric alert">
+                <div class="label">Overdue follow-ups</div>
+                <div class="value" id="mOverdue">3</div>
+                <div class="trend">Needs attention</div>
+              </div>
+              <div class="metric">
+                <div class="label">Qualified this month</div>
+                <div class="value" id="mQualified">7</div>
+                <div class="trend">38% qualification rate</div>
+              </div>
+            </div>
+            <div class="grid">
+              <div class="card">
+                <div class="card-head">
+                  <h3>Lead pipeline</h3>
+                  <button class="secondary" data-go="leads">
+                    View all leads
+                  </button>
+                </div>
+                <div class="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Owner Operator</th>
+                        <th>Truck</th>
+                        <th>Authority</th>
+                        <th>Priority</th>
+                        <th>Status</th>
+                        <th>Follow-Up</th>
+                      </tr>
+                    </thead>
+                    <tbody id="dashboardRows"></tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-head">
+                  <h3>Next follow-ups</h3>
+                  <button class="secondary" data-go="followups">
+                    View schedule
+                  </button>
+                </div>
+                <div class="followups" id="nextFollowups"></div>
+              </div>
+            </div>
+          </section>
+          <section class="section" id="pipeline">
+            <div class="heading">
+              <div>
+                <h2>Recruiting Pipeline</h2>
+                <p>
+                  Move each Owner Operator through a clear, consistent
+                  qualification process.
+                </p>
+              </div>
+              <div class="pipeline-toolbar">
+                <select class="control" id="pipelineFilter">
+                  <option value="">All recruiters</option></select
+                ><button class="primary add-any">+ Add OO Lead</button>
+              </div>
+            </div>
+            <div class="kanban" id="pipelineBoard"></div>
+          </section>
+          <section class="section" id="leads">
+            <div class="heading">
+              <div>
+                <h2 id="leadsTitle">My Leads</h2>
+                <p>
+                  Track every Owner Operator from first contact to
+                  qualification.
+                </p>
+              </div>
+              <button class="primary add-any">+ Add OO Lead</button>
+            </div>
+            <div class="card">
+              <div class="card-head">
+                <div class="filters">
+                  <input
+                    id="search"
+                    placeholder="Search name, company, phone…"
+                  /><select id="statusFilter">
+                    <option value="">All statuses</option>
+                    <option>New Lead</option>
+                    <option>Contacted</option>
+                    <option>Interested</option>
+                    <option>Follow-Up</option>
+                    <option>Qualification</option>
+                    <option>Documents Pending</option>
+                    <option>Qualified</option>
+                    <option>Future Lead</option>
+                    <option>Not Interested</option></select
+                  ><select id="priorityFilter">
+                    <option value="">All priorities</option>
+                    <option>Hot</option>
+                    <option>High</option>
+                    <option>Medium</option>
+                    <option>Low</option>
+                  </select>
+                </div>
+                <span id="leadCount" class="sub"></span>
+              </div>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Owner Operator</th>
+                      <th>Contact</th>
+                      <th>Truck</th>
+                      <th>City / State</th>
+                      <th>Authority</th>
+                      <th>Recruiter</th>
+                      <th>Status</th>
+                      <th>Next Follow-Up</th>
+                    </tr>
+                  </thead>
+                  <tbody id="leadRows"></tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+          <section class="section" id="followups">
+            <div class="heading">
+              <div>
+                <h2 id="followTitle">My Follow-Ups</h2>
+                <p>Stay on top of today’s conversations and overdue work.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-head">
+                <h3>Follow-up schedule</h3>
+                <div class="filters">
+                  <select id="fuFilter">
+                    <option value="">All follow-ups</option>
+                    <option value="today">Due today</option>
+                    <option value="overdue">Overdue</option>
+                    <option value="upcoming">Upcoming</option>
+                  </select>
+                </div>
+              </div>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Due</th>
+                      <th>Owner Operator</th>
+                      <th>Type</th>
+                      <th>Notes</th>
+                      <th>Recruiter</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="fuRows"></tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+          <section class="section" id="qualified">
+            <div class="heading">
+              <div>
+                <h2>Qualified Leads</h2>
+                <p>Review candidates ready to move into the Main OO CRM.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Owner Operator</th>
+                      <th>Truck</th>
+                      <th>Insurance</th>
+                      <th>Documents</th>
+                      <th>Recruiter</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="qualifiedRows"></tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+          <section class="section" id="documents">
+            <div class="heading">
+              <div>
+                <h2>Documents</h2>
+                <p>
+                  Simple collection status only. Detailed compliance stays in
+                  the Main OO CRM.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Owner Operator</th>
+                      <th>Documents Status</th>
+                      <th>Qualification</th>
+                      <th>Notes</th>
+                      <th>Updated</th>
+                    </tr>
+                  </thead>
+                  <tbody id="docRows"></tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+          <section class="section" id="activity">
+            <div class="heading">
+              <div>
+                <h2>Activity & Audit History</h2>
+                <p>See who changed a lead, what happened, and when.</p>
+              </div>
+              <div class="activity-filters">
+                <select id="activityType">
+                  <option value="">All activity</option>
+                  <option>Lead Created</option>
+                  <option>Status Changed</option>
+                  <option>Follow-Up</option>
+                  <option>Note</option>
+                  <option>Duplicate Checked</option></select
+                ><select id="activityUser">
+                  <option value="">All team members</option>
+                </select>
+              </div>
+            </div>
+            <div class="card">
+              <div class="detail">
+                <div class="timeline" id="activityList"></div>
+              </div>
+            </div>
+          </section>
+          <section class="section" id="messages">
+            <div class="heading">
+              <div>
+                <h2>Team Messages</h2>
+                <p>
+                  Send private messages to recruiters, managers, and admins.
+                </p>
+              </div>
+            </div>
+            <div class="messaging-shell">
+              <aside class="conversation-list">
+                <div class="conversation-head">
+                  <strong>Conversations</strong
+                  ><button class="primary" id="newConversationBtn">
+                    + New
+                  </button>
+                </div>
+                <div id="conversationList"></div>
+              </aside>
+              <div class="chat-panel">
+                <div class="chat-head" id="chatHead">
+                  <div>
+                    <strong>Select a teammate</strong
+                    ><span class="sub"
+                      >Choose a conversation to start messaging.</span
+                    >
+                  </div>
+                </div>
+                <div class="chat-thread" id="chatThread">
+                  <div class="chat-empty">
+                    Your private team conversations appear here.
+                  </div>
+                </div>
+                <form class="chat-compose" id="messageForm">
+                  <textarea
+                    id="messageText"
+                    maxlength="4000"
+                    placeholder="Write a message…"
+                    disabled
+                  ></textarea
+                  ><button
+                    class="primary"
+                    type="submit"
+                    disabled
+                    id="sendMessageBtn"
+                  >
+                    Send
+                  </button>
+                </form>
+              </div>
+            </div>
+          </section>
+          <section class="section" id="assistant">
+            <div class="heading">
+              <div>
+                <h2>AI Recruiting Assistant</h2>
+                <p>
+                  Ask about leads, qualification, follow-ups, or draft a
+                  professional message.
+                </p>
+              </div>
+            </div>
+            <div class="assistant-shell">
+              <div class="assistant-suggestions">
+                <button data-prompt="Which leads need attention today?">
+                  Today’s priorities</button
+                ><button
+                  data-prompt="Draft a follow-up message for an Owner Operator who has not replied."
+                >
+                  Draft follow-up</button
+                ><button
+                  data-prompt="Summarize our qualification process for a new recruiter."
+                >
+                  Qualification help
+                </button>
+              </div>
+              <div class="assistant-thread" id="assistantThread">
+                <div class="bot-message">
+                  <strong>Digital Storm AI</strong>
+                  <p>How can I help with recruiting today?</p>
+                </div>
+              </div>
+              <form class="assistant-compose" id="assistantForm">
+                <textarea
+                  id="assistantText"
+                  placeholder="Ask Digital Storm AI…"
+                  maxlength="3000"
+                ></textarea
+                ><button class="primary" type="submit">Ask AI</button>
+              </form>
+            </div>
+          </section>
+          <section class="section" id="performance">
+            <div class="heading">
+              <div>
+                <h2>Recruiter Performance</h2>
+                <p>
+                  Compare workload, follow-up discipline, qualification results,
+                  and conversion.
+                </p>
+              </div>
+              <div class="filters">
+                <select id="performancePeriod">
+                  <option value="30">Last 30 days</option>
+                  <option value="7">Last 7 days</option>
+                  <option value="90">Last 90 days</option>
+                </select>
+              </div>
+            </div>
+            <div class="performance-grid" id="performanceCards"></div>
+            <div class="card">
+              <div class="card-head">
+                <h3>Team scorecard</h3>
+                <span class="sub">Live from assigned CRM records</span>
+              </div>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Recruiter</th>
+                      <th>Active Leads</th>
+                      <th>Contacted</th>
+                      <th>Qualified</th>
+                      <th>Overdue</th>
+                      <th>Qualification Rate</th>
+                    </tr>
+                  </thead>
+                  <tbody id="performanceRows"></tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+          <section class="section" id="recruiters">
+            <div class="heading">
+              <div>
+                <h2>Team Profiles</h2>
+                <p>
+                  Select any team member to open their profile and workload
+                  summary.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Team Member</th>
+                      <th>Role</th>
+                      <th>Assigned Leads</th>
+                      <th>Due Today</th>
+                      <th>Overdue</th>
+                      <th>Qualified</th>
+                    </tr>
+                  </thead>
+                  <tbody id="teamRows"></tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+          <section class="section" id="users">
+            <div class="heading">
+              <div>
+                <h2>User Management</h2>
+                <p>
+                  Create accounts, edit roles, reset passwords, and control
+                  access.
+                </p>
+              </div>
+              <button class="primary" id="newUserBtn">+ Add User</button>
+            </div>
+            <div class="card">
+              <div class="card-head">
+                <div>
+                  <h3>Team accounts</h3>
+                  <span class="sub" id="userCount">Loading users…</span>
+                </div>
+                <button class="secondary" id="refreshUsersBtn">Refresh</button>
+              </div>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>User</th>
+                      <th>Username / Email</th>
+                      <th>Role</th>
+                      <th>Status</th>
+                      <th>First Login</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody id="userRows">
+                    <tr>
+                      <td colspan="6" class="empty">Loading users…</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <div class="drawer" id="drawer">
+      <div class="drawer-panel">
+        <div class="drawer-top">
+          <div>
+            <span class="pill p-green" id="drawerStatus">Qualified</span>
+            <h2 id="drawerName">Shemar Nelson</h2>
+            <span class="sub" id="drawerMeta"
+              >Top Car Yarde LLC · Cincinnati, OH</span
+            >
+          </div>
+          <button class="close" id="closeDrawer">×</button>
+        </div>
+        <div class="tabs" id="tabs">
+          <button class="active" data-tab="overview">Overview</button
+          ><button data-tab="info">OO Info</button
+          ><button data-tab="qualification">Qualification</button
+          ><button data-tab="notes">Notes</button
+          ><button data-tab="follow">Follow-Ups</button
+          ><button data-tab="activityTab">Activity</button
+          ><button data-tab="docs">Documents</button>
+        </div>
+        <div class="detail" id="detailContent"></div>
+      </div>
+    </div>
+    <div class="drawer" id="profileDrawer">
+      <div class="drawer-panel">
+        <div class="drawer-top">
+          <div>
+            <span class="pill p-blue" id="profileRole">Manager</span>
+            <h2 id="profileName">Angel Lord</h2>
+            <span class="sub" id="profileUsername">@angellord</span>
+          </div>
+          <button class="close" id="closeProfile">×</button>
+        </div>
+        <div class="detail" id="profileContent"></div>
+      </div>
+    </div>
+    <div class="drawer" id="notificationDrawer">
+      <div class="drawer-panel notification-panel">
+        <div class="drawer-top">
+          <div>
+            <h2>Notifications</h2>
+            <span class="sub" id="notificationSummary"
+              >You’re all caught up.</span
+            >
+          </div>
+          <div class="notification-toolbar">
+            <button class="secondary" id="markAllRead">Mark all read</button
+            ><button class="close" id="closeNotifications">×</button>
+          </div>
+        </div>
+        <div id="notificationList"></div>
+      </div>
+    </div>
+    <div class="modal" id="modal">
+      <div class="modal-card">
+        <div class="modal-head">
+          <h3>Add Owner Operator Lead</h3>
+          <button class="close" id="closeModal">×</button>
+        </div>
+        <div class="smart-import">
+          <div>
+            <strong>AI-assisted paste</strong>
+            <p>
+              Paste an Indeed application, message, or call note and fill the
+              form automatically.
+            </p>
+          </div>
+          <button class="primary" type="button" id="openImportBtn">
+            Paste applicant data
+          </button>
+        </div>
+        <form id="leadForm">
+          <div class="form">
+            <div class="field">
+              <label>OO Full Name *</label
+              ><input name="name" required placeholder="Full name" />
+            </div>
+            <div class="field">
+              <label>Company Name</label
+              ><input name="company" placeholder="Optional" />
+            </div>
+            <div class="field">
+              <label>Phone Number *</label
+              ><input name="phone" required placeholder="(555) 000-0000" />
+            </div>
+            <div class="field">
+              <label>Email</label
+              ><input
+                name="email"
+                type="email"
+                placeholder="name@example.com"
+              />
+            </div>
+            <div class="field">
+              <label>City (optional)</label
+              ><input name="city" required placeholder="City" />
+            </div>
+            <div class="field">
+              <label>State (optional)</label
+              ><select name="state" required>
+                <option value="">Select state</option>
+                <option>AL</option>
+                <option>AZ</option>
+                <option>CA</option>
+                <option>CO</option>
+                <option>FL</option>
+                <option>GA</option>
+                <option>IL</option>
+                <option>IN</option>
+                <option>KY</option>
+                <option>MI</option>
+                <option>MO</option>
+                <option>NC</option>
+                <option>NJ</option>
+                <option>NY</option>
+                <option>OH</option>
+                <option>OK</option>
+                <option>PA</option>
+                <option>SC</option>
+                <option>TN</option>
+                <option>TX</option>
+                <option>VA</option>
+                <option>WI</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Lead Source *</label
+              ><select name="source">
+                <option>Indeed</option>
+                <option>Facebook</option>
+                <option>LinkedIn</option>
+                <option>Referral</option>
+                <option>Company Website</option>
+                <option>Craigslist</option>
+                <option>Cold Call</option>
+                <option>Existing OO Referral</option>
+                <option>Existing Carrier Referral</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Original / Applied Authority (optional)</label
+              ><input
+                name="applied_under_authority"
+                required
+                placeholder="Company or authority name"
+              />
+            </div>
+            <div class="field">
+              <label>Truck Type *</label
+              ><select name="truck">
+                <option>Cargo Van</option>
+                <option>Sprinter Van</option>
+                <option>Box Truck</option>
+                <option>Straight Truck</option>
+                <option>Hotshot</option>
+                <option>Flatbed</option>
+                <option>Dry Van (DV)</option>
+                <option>Reefer</option>
+                <option>Power Only</option>
+                <option>Tractor</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Authority Status *</label
+              ><select name="authority">
+                <option>Wants Our Authority</option>
+                <option>Has Own Authority</option>
+                <option>Currently Under Another Authority</option>
+                <option>Authority Pending</option>
+                <option>No Authority</option>
+                <option>Not Sure</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Priority</label
+              ><select name="priority">
+                <option>Hot</option>
+                <option selected>High</option>
+                <option>Medium</option>
+                <option>Low</option>
+                <option>Future</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Next Follow-Up</label
+              ><input name="next_follow_up_at" type="datetime-local" />
+            </div>
+            <div class="field full">
+              <label>Important Notes</label
+              ><textarea
+                name="notes"
+                placeholder="Capture the useful recruiting context here…"
+              ></textarea>
+            </div>
+            <div class="field full">
+              <div class="duplicate-box" id="duplicateBox"></div>
+            </div>
+          </div>
+          <div class="modal-foot">
+            <button type="button" class="secondary" id="cancelModal">
+              Cancel</button
+            ><button type="submit" class="primary">Create Lead</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal" id="importModal">
+      <div class="modal-card">
+        <div class="modal-head">
+          <div>
+            <h3>Paste Applicant Data</h3>
+            <span class="sub"
+              >The assistant extracts fields; you review everything before
+              saving.</span
+            >
+          </div>
+          <button class="close" id="closeImport">×</button>
+        </div>
+        <div class="import-area">
+          <textarea
+            id="importText"
+            placeholder="Paste the applicant's Indeed details, WhatsApp message, email, or recruiter notes here…"
+          ></textarea>
+          <div class="import-status" id="importStatus"></div>
+        </div>
+        <div class="modal-foot">
+          <button type="button" class="secondary" id="cancelImport">
+            Cancel</button
+          ><button type="button" class="primary" id="analyzeImport">
+            Analyze & Fill Fields
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="conversationModal">
+      <div class="modal-card" style="max-width: 520px">
+        <div class="modal-head">
+          <div>
+            <h3>New Conversation</h3>
+            <span class="sub">Choose a teammate to message privately.</span>
+          </div>
+          <button class="close" id="closeConversationModal">×</button>
+        </div>
+        <div class="team-picker" id="teamPicker"></div>
+      </div>
+    </div>
+    <div class="toast" id="toast"></div>
+    <div class="password-gate" id="passwordGate">
+      <form class="password-card" id="passwordForm">
+        <h2>Create a new password</h2>
+        <p>
+          Choose a private password with at least 10 characters. Your temporary
+          password will stop working.
+        </p>
+        <div class="auth-error" id="passwordError"></div>
+        <div class="field">
+          <label>New password</label
+          ><input
+            name="password"
+            type="password"
+            minlength="10"
+            required
+            autocomplete="new-password"
+          />
+        </div>
+        <div class="field">
+          <label>Confirm password</label
+          ><input
+            name="confirm"
+            type="password"
+            minlength="10"
+            required
+            autocomplete="new-password"
+          />
+        </div>
+        <button class="primary" type="submit">Save new password</button>
+      </form>
+    </div>
+    <div class="modal" id="userModal">
+      <div class="modal-card" style="max-width: 560px">
+        <div class="modal-head">
+          <h3>Create User Account</h3>
+          <button class="close" id="closeUserModal">×</button>
+        </div>
+        <form id="userForm">
+          <div class="form">
+            <div class="field full">
+              <label>Full Name *</label><input name="full_name" required />
+            </div>
+            <div class="field">
+              <label>Username *</label
+              ><input
+                name="username"
+                required
+                pattern="[a-z0-9]{4,}"
+                placeholder="lowercase only"
+              />
+            </div>
+            <div class="field">
+              <label>Role *</label
+              ><select name="role">
+                <option value="recruiter">Recruiter</option>
+                <option value="manager">Manager</option>
+                <option value="admin">Admin</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label>Work Email *</label
+              ><input
+                name="email"
+                type="email"
+                required
+                placeholder="name@digitalstorming.com"
+              />
+            </div>
+            <div class="field full">
+              <label>Temporary Password *</label
+              ><input name="password" type="password" minlength="8" required />
+            </div>
+          </div>
+          <div class="modal-foot">
+            <button type="button" class="secondary" id="cancelUserModal">
+              Cancel</button
+            ><button type="submit" class="primary">Create Account</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/legacy-accounts.js"></script>
+    <script src="js/auth-service.js"></script>
+    <script src="js/lead-repository.js"></script>
+    <script src="js/applicant-parser.js"></script>
+    <script src="js/app.js"></script>
+    <script src="crm-upgrade.js"></script>
+    <script src="js/applicant-intake.js"></script>
+    <script src="js/security-dashboard.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>
